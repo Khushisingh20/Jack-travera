@@ -1,0 +1,27 @@
+.ui-collapsible-heading a span.ui-btn {
+	position: absolute;
+	right: 6px;
+	top: 50%;
+	margin: -12px 0 0 0;
+	width: 20px;
+	height: 20px;
+	padding: 1px 0px 1px 2px;
+	text-indent: -9999px;
+}
+
+.ui-btn-inner {
+    display: none;
+    overflow: hidden;
+    padding: 0.6em 25px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.ui-btn {
+    cursor: pointer;
+    display: none;
+    margin: 0.5em 5px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+}

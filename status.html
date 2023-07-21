@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Mumbai Best Bus - Find a Bus (B.E.S.T)</title>
+<meta name="viewport" content="user-scalable=no, width=device-width">
+
+<link rel="stylesheet" type="text/css" href="app.css">
+
+<script type="text/javascript" src="./lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="init.js"></script> 
+
+<script type="text/javascript" src="./lib/jquery/jquery.mobile.min.js"></script>
+
+<script type="text/javascript" src="libfns.js"></script>
+<script type="text/javascript" src="cf.js"></script>
+  
+<script type="text/javascript" src="./init/buslist.js"></script>
+<script type="text/javascript" src="./init/stopnames.js"></script>
+
+<script type="text/javascript" src="./init/busmaster.js"></script>
+<script type="text/javascript" src="./init/stopbus.js"></script> 
+<script type="text/javascript" src="status.js"></script>
+
+</head>
+<body>
+<div data-role="page" data-theme="a">
+	<div data-role="header" data-theme="a">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="index.html" rel="external" class="ui-btn-active">Find</a></li>
+			<li><a href="busesfound.html" rel="external">Routes</a></li>
+			<li><a href="journey.html" rel="external">Journey</a></li> 
+		</ul>
+	</div><!-- /navbar -->
+	</div> <!-- /header -->
+	<div data-role="content" data-theme="b">
+	<form name="myForm" action="" onsubmit="validateFindBusForm(); return false;" >
+	<div style='width:98%;line-height:16px;' data-role="collapsible" data-theme="a">
+	<h5><span id='busroutesatstart'>Buses due at </span></h5>
+	<div id="routesAtStop" class="tbl_color">Getting Bus Status ....</div>
+	<input id='busStatus' type='hidden'>
+	</div> <!-- /collapsible -->
+	</form>
+	</div> <!-- /content -->
+</div> <!-- /page -->
+</body>
+</html>

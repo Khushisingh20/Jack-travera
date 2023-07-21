@@ -1,0 +1,22 @@
+#table1 {
+	width: 100%;
+}
+thead {
+	background-color: black;
+	color: white;
+	text-indent: 14px;
+	text-align: left;
+}
+tbody tr:nth-child(odd) {
+	background-color: rgba(0, 255, 0, 0.1); /* green, 10% alpha */
+}
+tbody tr:nth-child(even) {
+	background-color: rgba(175, 238, 238, 0.3); 
+}
+
+a {
+	color: white;
+    font-size: 18px;
+    font-weight: bold;
+	
+}

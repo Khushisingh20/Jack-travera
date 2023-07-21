@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(nature1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  
+  .header {
+    padding: 80px;
+    text-align: center;
+    background: rgb(0, 255, 255);
+    background-image: url(https://tse2.mm.bing.net/th?id=OIP._BrnkSLTKOJ-mu1HKPibtwHaEK&pid=Api&P=0&w=317&h=179);
+    color: rgb(255, 255, 255);
+  }
+  
+  
+  .header h1 {
+    font-size: 80px;
+    color: rgb(8, 21, 95);
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+  
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: rgb(0, 255, 255);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  .reg td{
+      font-size: 28px;
+  }
+  
+  
+  
+  
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+  .navbar a.active {
+   
+    background-color: #666;
+    color: white;
+    float: right;
+    
+  }
+  
+  .submit{
+      border-radius: 20px;
+  }
+  .submit:hover{
+      transform: scale(1.2);
+      transition: transform 0.5s;
+  }
+  .button button{
+    width: 180px;
+    color: cyan;
+    font-size: 18px;
+    padding: 12px 0;
+    background: rgba(0,0,0,0.5);
+   
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: #fff;
+    margin-top: 30px;
+    
+    transition: transform 0.5s;
+}
+.button button:hover{
+  transform: scale(1.1);
+}

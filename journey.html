@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BestBus Mumbai - Show Stops</title>
+
+<meta name="viewport" content="user-scalable=no, width=device-width" >
+<!--
+<link rel="stylesheet" type="text/css" href="css/mobile.css" media="only screen and (max-width: 480px)" > 
+<link rel="stylesheet" type="text/css" href="css/desktop.css" media="screen and (min-width: 481px)" >
+-->
+
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./lib/jquery/jquery.mobile.min.css">
+
+<script type="text/javascript" src="./lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="init.js"></script> 
+
+<script type="text/javascript" src="./lib/jquery/jquery.mobile.min.js"></script>
+
+<script type="text/javascript" src="libfns.js"></script>
+<script type="text/javascript" src="cf.js"></script>
+	<script type="text/javascript">
+		busno = gup('b');
+		if(busno === "")
+			busno = getCookie('cBusNo');
+		if(busno === "") {
+			alert('No Journey selected yet. Select one from the Find Bus tab or the Routes tab');
+			window.location.href = "index.html";
+		}
+		busno = busno.replace(/ /g, "").toLowerCase();
+		jsfile = decodeURI("%3Cscript src='busroutes\/bcjs" + busno.substr(0,1) 
+				+ ".js' type='text/javascript'%3E%3C/script%3E");
+		
+		bfile = '<script> function getb() { return getb' + busno + '();}<\/script>'; 
+		document.write(jsfile);
+		document.write(bfile);
+    </script>
+</head>
+<!-- <body onLoad='initjourney()> -->
+<body>
+
+<div data-role="page" data-theme="a">
+	<div data-role="header" data-theme="a">
+	<div data-role="navbar">
+<!--	<div id="navigation">  -->
+		<ul>
+			<li><a href="index.html" rel="external">Find</a></li>
+			<li><a href="busesfound.html" rel="external">Routes</a></li>
+<!--			<li><a href="busroute.html" rel="external">Routes</a></li> -->
+			<li><a href="journey.html" rel="external" class="ui-btn-active">Journey</a></li> 
+		</ul>
+	</div><!-- /navbar -->
+	</div> <!-- /header -->
+	<div data-role="content" data-theme="b">
+	<div style="align:center;" class='hilite' id="routeTitle"></div>
+	<div id="dispRoute"></div>
+	<div id="location"></div>
+	<div id="pastB4"></div>
+	<div class="hilite">
+	<div id="nearStop">No location fix as yet</div>
+	<div id="locAccuracy" style="font-size: 14px;"></div>
+	</div>
+	<div id="routeStops"></div>
+<!--	<div id="remainingJourney" style="font-size: 16px;"></div>
+	<div id="journey"></div> -->
+	<div style='width:98%;line-height:8px;' data-role="collapsible" data-theme="a">
+		<h5><span id="font-size:14px;">Recent Journeys</h5>
+		<div id="recentJourneys" class="tbl_color"></div>
+	</div> <!-- /collapsible -->
+	
+	</div> <!-- /content -->
+</div> <!-- /page -->
+
+</body>
+<script type="text/javascript" src="journey.js"></script>
+</html>
